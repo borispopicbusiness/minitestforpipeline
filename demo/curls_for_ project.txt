@@ -1,0 +1,17 @@
+curl -X GET \
+-H "Content-Type: application/json" \
+"http://localhost:8090/api/v1/test/get?demoRequestParam=123"
+
+curl -X POST \
+-H "Content-Type: application/json" \
+-H "TestHeaderParam: testHeaderValue" \
+"http://localhost:8090/api/v1/test/post"
+
+curl -X PUT \
+-H "Content-Type: application/json" \
+-d '{"name": "Boris", "surname": "Popic"}' \
+"http://localhost:8090/api/v1/test/put"
+
+curl -X DELETE \
+-H "Content-Type: application/json" \
+"http://localhost:8090/api/v1/test/delete/java21/"
