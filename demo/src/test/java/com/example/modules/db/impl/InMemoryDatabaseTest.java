@@ -14,21 +14,21 @@ class InMemoryDatabaseTest {
     }
 
     @Test
-    void addObject() {
+    void shouldAddObject() {
         database.addObject("name", "Boris");
         Assertions.assertEquals(1, database.getKeys().size());
         Assertions.assertEquals("name", database.getKeys().get(0));
     }
 
     @Test
-    void getValue() {
+    void shouldReturnValue() {
         database.addObject("name", "Boris");
         Assertions.assertEquals(1, database.getKeys().size());
         Assertions.assertEquals("name", database.getKeys().get(0));
     }
 
     @Test
-    void getKeys() {
+    void shouldReturnKeys() {
         database.addObject("name", "Boris");
         database.addObject("surname", "Popic");
         database.addObject("name", "Stefan");
@@ -39,7 +39,7 @@ class InMemoryDatabaseTest {
     }
 
     @Test
-    void getValues() {
+    void shouldReturnValues() {
         database.addObject("name", "Boris");
         database.addObject("surname", "Popic");
         database.addObject("name", "Stefan");
@@ -49,7 +49,7 @@ class InMemoryDatabaseTest {
     }
 
     @Test
-    void deleteObject() {
+    void ShouldDeleteObjectAndReturnExpectedState() {
         database.addObject("name", "Boris");
         database.addObject("surname", "Popic");
         database.addObject("name", "Stefan");
@@ -62,7 +62,7 @@ class InMemoryDatabaseTest {
     }
 
     @Test
-    void updateObject() {
+    void shouldUpdateObjectandValidateNewState() {
         database.addObject("name", "Boris");
         database.addObject("surname", "Popic");
         database.addObject("name", "Stefan");
@@ -87,7 +87,7 @@ class InMemoryDatabaseTest {
     }
 
     @Test
-    void searchObject() {
+    void shouldFindObject() {
         database.addObject("name", "Boris");
         database.addObject("surname", "Popic");
         database.addObject("name", "Stefan");
@@ -106,7 +106,7 @@ class InMemoryDatabaseTest {
     }
 
     @Test
-    void eraseDatabase() {
+    void shouldEraseDatabase() {
         database.addObject("name", "Boris");
         database.addObject("surname", "Popic");
         database.addObject("name", "Stefan");

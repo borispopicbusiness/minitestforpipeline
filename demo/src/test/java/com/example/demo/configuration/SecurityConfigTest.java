@@ -14,7 +14,11 @@ import org.springframework.web.context.WebApplicationContext;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
+/**
+ * This test class tests SecurityConfig class. It should be updates as the project progresses.
+ *
+ * @author Boris Popic
+ */
 @SpringBootTest
 @Import(SecurityConfig.class)
 class SecurityConfigTest {

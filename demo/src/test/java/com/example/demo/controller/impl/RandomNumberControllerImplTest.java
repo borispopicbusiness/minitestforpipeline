@@ -17,7 +17,7 @@ class RandomNumberControllerImplTest {
     private MockMvc mockMvc;
 
     @Test
-    void getRandomNumber() throws Exception {
+    void shouldFetchRandomNumber() throws Exception {
         mockMvc.perform(get("/api/v1/rnd/gr"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith("application/json"));
