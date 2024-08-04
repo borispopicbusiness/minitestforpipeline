@@ -15,3 +15,5 @@ curl -X PUT \
 curl -X DELETE \
 -H "Content-Type: application/json" \
 "http://localhost:8090/api/v1/test/delete/java21/"
+
+.
