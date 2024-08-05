@@ -3,7 +3,6 @@ package com.example.modules.configuration;
 import com.example.modules.configuration.impl.InMemoryDatabaseConfiguration;
 import com.example.modules.db.impl.InMemoryDatabase;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,10 +12,6 @@ public class InMemoryDataBaseConfigurationTest {
 
     @Autowired
     private InMemoryDatabase inMemoryDatabase;
-
-    @BeforeEach
-    public void setUp() {
-    }
 
     @Test
     void shouldInitializeAccessAndEraseDatabase() {

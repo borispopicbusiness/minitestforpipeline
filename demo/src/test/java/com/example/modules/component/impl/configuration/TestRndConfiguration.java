@@ -9,6 +9,6 @@ public class TestRndConfiguration {
 
     @Bean
     public Seed testSeed() {
-        return (Seed) new TestSeed();
+        return new TestSeed();
     }
 }

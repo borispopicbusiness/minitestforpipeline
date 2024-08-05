@@ -10,7 +10,7 @@ class InMemoryDatabaseTest {
 
     @BeforeEach
     void setUp() {
-        database = new InMemoryDatabase<String, String>();
+        database = new InMemoryDatabase<>();
     }
 
     @Test

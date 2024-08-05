@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -24,7 +25,7 @@ public class SecurityConfig {
                                 .permitAll()
                                 .anyRequest().authenticated()
                 )
-                .csrf(csrf -> csrf.disable()); // Enables HTTP Basic authentication
+                .csrf(AbstractHttpConfigurer::disable); // Enables HTTP Basic authentication
 
         return http.build();
     }

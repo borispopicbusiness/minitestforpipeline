@@ -28,6 +28,12 @@ class RandomGeneratorComponentTest {
         seedField.setAccessible(true); // Allow access to private fields
 
         // Get the Seed instance from the 'seed' field
+        var recreatedRandomNumber = getRecreatedRandomNumber(seedField);
+
+        Assertions.assertEquals(0, randomNumber - recreatedRandomNumber);
+    }
+
+    private long getRecreatedRandomNumber(Field seedField) throws IllegalAccessException, NoSuchFieldException {
         Seed seedInstance = (Seed) seedField.get(randomGeneratorComponent);
 
         // Access the private 'seed' field from Seed
@@ -39,8 +45,6 @@ class RandomGeneratorComponentTest {
 
         Random rand = new Random();
         rand.setSeed(seedValue);
-        var recreatedRandomNumber = rand.nextLong();
-
-        Assertions.assertEquals(0, randomNumber - recreatedRandomNumber);
+        return rand.nextLong();
     }
 }
